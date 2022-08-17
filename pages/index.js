@@ -1,4 +1,7 @@
 import Head from 'next/head'
+import Gallery from 'components/Gallery'
+import Hero from 'components/Hero'
+import Review from 'components/Review'
 
 export default function Home() {
   return (
@@ -8,8 +11,10 @@ export default function Home() {
         <meta name='description' content='Rental Apartment Website' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-
-      <h1>Welcome!</h1>
+      <Hero/>
+      <Gallery/>
+      <Review/>
+  
     </div>
   )
 }
