@@ -65,9 +65,81 @@ const Review = () => {
   </div>
 </div>
     
-    
+    <Around/>
     </>
   )
 }
 
 export default Review
+
+const destinations = [
+  {
+    name: 'Lake Como',
+    description: '26km, 32 minutes by car',
+  },
+  {
+    name: 'Milano',
+    description: '124km, 2h by car or 1h 40m by train',
+  },
+  {
+    name: 'Passo San Marco',
+    description: '17km, 28 minutes by car',
+  },
+  {
+    name: 'Passo Spluga',
+    description: '71km, 1h 37min by car',
+  },
+  {
+    name: 'St Moritz',
+    description: '92km, 1h 52m by car',
+  },
+  {
+    name: 'Passo Bernina',
+    description: '92km, 1hr 51 minutes by car',
+  },
+  {
+    name: 'Bormio',
+    description: '97km, 1h 43 min by car',
+  },
+  {
+    name: 'Livigno',
+    description: '133km, 2h 35min by car',
+  },
+]
+
+const Around = () => {
+  return(
+    <div className='relative  py-16 sm:py-24 lg:py-32'>
+  <div className='mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl'>
+    <h2 className='text-base font-semibold tracking-wider uppercase'>
+      The surroundings
+    </h2>
+    <p className='mt-2 text-3xl font-extrabold tracking-tight sm:text-4xl'>
+      Popular destinations for your holidays
+    </p>
+    <p className='mt-5 max-w-prose mx-auto text-xl text-gray-300'>
+      From challenging mountain trails to beautiful alpine lakes to
+      cities, lots of destinations in reach for a day trip
+    </p>
+    <div className='mt-12'>
+      <div className='grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4'>
+        {destinations.map((destination, index) => (
+          <div className='pt-6' key={index}>
+            <div className='  rounded-lg px-6 pb-8'>
+              <div className='-mt-6'>
+                <h3 className='mt-8 text-lg font-medium  tracking-tight text-white'>
+                  {destination.name}
+                </h3>
+                <p className='mt-5 text-base text-gray-200'>
+                  {destination.description}
+                </p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</div>
+  )
+}
