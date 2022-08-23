@@ -11,7 +11,7 @@ export default function Home() {
         <meta name='description' content='Rental Apartment Website' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <Hero/>
+      <Hero desc={true}/>
       <Gallery/>
       <Review/>
   
