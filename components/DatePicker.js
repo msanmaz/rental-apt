@@ -21,6 +21,7 @@ const DatePicker = () => {
 
                 <div className='pt-6 flex justify-center availability-calendar'>
                     <DayPicker
+                    onDayClick={handleDayClick}
                     selected={[from, { from, to }]}
                     mode="range"
                         components={{
