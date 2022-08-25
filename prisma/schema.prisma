@@ -9,3 +9,15 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+
+model Booking {
+  id        String   @id @default(cuid())
+  from      DateTime
+  to        DateTime
+  price     Decimal?
+  email     String? //needed for Stripe
+  sessionId String? //needed for Stripe
+  paid      Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
