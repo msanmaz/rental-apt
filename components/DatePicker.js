@@ -5,6 +5,7 @@ import { getBookedDates } from 'lib/booking'
 import { getBlockedDates, isDaySelectable, addDayToRange, getDatesBetweenDates, calcNumberOfNightsBetweenDates } from 'lib/dates'
 import { getCost, calcTotalCostOfStay } from 'lib/cost'
 import { useState } from 'react'
+import PaymentForm from './payment-form-component'
 
 
 
@@ -125,6 +126,8 @@ const DatePicker = () => {
                         }}
                     />
                 </div>
+
+                <PaymentForm total={totalCost}/>
             </div>
         </>
     )

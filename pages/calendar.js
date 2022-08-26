@@ -8,7 +8,6 @@ const Calendar = () => {
     <Hero desc={false}/>
     <DatePicker/>
     
-    
     </>
   )
 }
