@@ -127,7 +127,7 @@ const DatePicker = () => {
                     />
                 </div>
 
-                <PaymentForm total={totalCost}/>
+                <PaymentForm from={from} to={to} total={totalCost}/>
             </div>
         </>
     )
