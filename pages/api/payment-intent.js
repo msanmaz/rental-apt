@@ -12,16 +12,22 @@ export default async function handler(req, res) {
 
     if (req.body.paid === true) {
 
-      await prisma.booking.create({
+      const booking = await prisma.booking.create({
         data: {
           price: amount,
-          paid:true,
+          paid: true,
           sessionId: payment_intent_id,
           from: req.body.from,
           to: req.body.to,
         },
-      })
+      });
+      
+      res.status(201).json({
+        message: 'Booking created successfully',
+        booking: booking,
+      });
 
+      return; 
       // sendEmail(
       //   'you@youremail.com',
       //   'New booking',
@@ -42,7 +48,7 @@ export default async function handler(req, res) {
 
     } else {
 
-      
+
 
       if (payment_intent_id) {
         try {

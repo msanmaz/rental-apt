@@ -33,7 +33,32 @@ a {
 }
 
 
+
 .rdp-day {
-  border-radius: 10px !important;
+  border-radius: 5px !important;
+}
+/* Base size for larger screens */
+.rdp {
+  --rdp-cell-size: 60px !important;
 }
 
+/* Medium screens (tablets) */
+@media (max-width: 768px) {
+  .rdp {
+    --rdp-cell-size: 50px !important; /* Slightly smaller cells for medium screens */
+  }
+}
+
+/* Small screens (large phones) */
+@media (max-width: 640px) {
+  .rdp {
+    --rdp-cell-size: 45px !important;; /* Even smaller cells for small screens */
+  }
+}
+
+/* Extra-small screens (small phones) */
+@media (max-width: 480px) {
+.rdp {
+    --rdp-cell-size: 35px !important;; /* Smallest cells for extra-small screens */
+  }
+}
