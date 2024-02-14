@@ -32,11 +32,12 @@ const PaymentForm = ({total,from,to}) => {
                 .then((res) => res.json())
                 .then((data) => {
                     console.log(data,'first call to create intent')
-                  setClientSecret(data.client_secret), setPaymentIntent(data.id);
+                  setClientSecret(data.client_secret)
+                  setPaymentIntent(data.id)
                 });
         }
 
-    }, [total]);
+    }, [total,from,to]);
 
     const paymentHandler = async (e) => {
         e.preventDefault()
@@ -74,7 +75,10 @@ const PaymentForm = ({total,from,to}) => {
                       payment_intent_id: paymentResult.paymentIntent.id,
                     }),
                   })
-                router.push(`/${paymentResult.paymentIntent.id}`)
+                
+                  setTimeout(()=> {
+                    router.push(`/${paymentResult.paymentIntent.id}`)
+                  },2000)
                 
             }
         }

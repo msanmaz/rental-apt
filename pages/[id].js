@@ -22,6 +22,9 @@ export async function getServerSideProps(context) {
   }
 
 const Success = ({res}) => {
+   if (res.length === 0 ){
+    return <>No Bookings Retrieved</>
+   }
     console.log(res)
   return (
     <div>

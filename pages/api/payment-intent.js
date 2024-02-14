@@ -42,6 +42,8 @@ export default async function handler(req, res) {
 
     } else {
 
+      
+
       if (payment_intent_id) {
         try {
           // If a payment_intent_id is passed, retrieve the paymentIntent
@@ -70,6 +72,10 @@ export default async function handler(req, res) {
           }
         }
       }
+
+
+
+
       try {
         // Create PaymentIntent
         const params = {
