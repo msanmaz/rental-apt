@@ -1,4 +1,4 @@
-![rental-apt]((https://github.com/msanmaz/rental-apt/blob/main/public/rental-apt.png?raw=true))
+![rental-apt](https://github.com/msanmaz/rental-apt/blob/main/public/rental-apt.png?raw=true)
 
  ## Rental Apartment Booking System
 
