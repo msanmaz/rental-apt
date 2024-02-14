@@ -59,6 +59,6 @@ a {
 /* Extra-small screens (small phones) */
 @media (max-width: 480px) {
 .rdp {
-    --rdp-cell-size: 35px !important;; /* Smallest cells for extra-small screens */
+    --rdp-cell-size: 45px !important;; /* Smallest cells for extra-small screens */
   }
 }

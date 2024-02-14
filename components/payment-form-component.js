@@ -103,10 +103,10 @@ const PaymentForm = ({total,from,to}) => {
              <div className='font-bold text-base'>{success}{error}</div> 
 
        } 
-                <div className='w-[55%] sm:w-[55%] md:w-[45%] lg:w-[35%] xl:w-[30%] 2xl:w-[22%] py-2 px-2 bg-white rounded-lg'>
+                <div className='w-[80%] sm:w-[55%] md:w-[45%] lg:w-[35%] xl:w-[30%] 2xl:w-[22%] py-2 px-2 bg-white rounded-lg'>
                 <CardElement />
                 </div>
-                <button type={'submit'} disabled={total === 0}  className='w-[55%] sm:w-[55%] md:w-[45%] lg:w-[35%] xl:w-[30%] 2xl:w-[22%] mt-2 uppercase flex items-center justify-center min-h-[20px] px-5 py-[5px] my-4 text-small-regular border transition-colors duration-200 disabled:opacity-50 text-black bg-gray-300 rounded-lg border-gray-900 hover:bg-gray-700 hover:text-white disabled:hover:bg-gray-900 disabled:hover:text-white'>{loading ? <Spinner/> : `Pay ${total} Now`}</button>
+                <button type={'submit'} disabled={total === 0}  className='w-[80%] sm:w-[55%] md:w-[45%] lg:w-[35%] xl:w-[30%] 2xl:w-[22%] mt-2 uppercase flex items-center justify-center min-h-[20px] px-5 py-[5px] my-4 text-small-regular border transition-colors duration-200 disabled:opacity-50 text-black bg-gray-300 rounded-lg border-gray-900 hover:bg-gray-700 hover:text-white disabled:hover:bg-gray-900 disabled:hover:text-white'>{loading ? <Spinner/> : `Pay ${total} Now`}</button>
             </div>
 
         </form>
